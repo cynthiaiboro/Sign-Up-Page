@@ -6,12 +6,66 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign Up Page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
+    <link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel= 'stylesheet' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' crossorigin='anonymous'>
     <style>
+    /* header styles */
+    @font-face {
+    font-family: 'Circularbook';
+    src: url('./circularbook.ttf');
+    }
+    @font-face {
+    font-family: 'Circularmedium';
+    src: url('./circularmedium.ttf');
+    }
+    #nav {
+    background-color: #ffffff;
+    padding: 3% 0;
+    }
+    .nav-link {
+    color: #000000 !important;
+    padding: 0 20px !important;
+    font-size: 1rem !important;
+    font-family: 'Circularbook' !important;
+    }
+    .nav-link:hover {
+    color: #2f6deb !important;
+    padding: 0 20px !important;
+    transition: 1s;
+    text-decoration: none !important;
+    }
+    .nav-item:last-of-type .nav-link {
+    padding: 0 40px 0 20px !important;
+    }
+    .get-started-button {
+    border-radius: 3px !important;
+    font-family: 'Circularbook' !important;
+    border: 2px solid #3e4353;
+    width: 130px;
+    height: 40px;
+    background-color: #ffffff;
+    }
+    .get-started-button a {
+    color: #3e4353;
+    }
+    .get-started-button a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    }
+    .get-started-button:hover {
+    cursor: pointer;
+    background: #3e4353;
+    color: #ffffff;
+    transition: ease-in 1s;
+    }
+    /* form styles */
+    #form-section {
+        background-color:  #e5e5e5;
+        padding: 20px 0px;
+    }
     #SignUp {
         background-color: #ffffff !important;
         border: 1px solid #ffffff;
-        margin: 10% 35%;
+        margin: 3% 35%;
         display: grid;
         justify-content: center;
         padding: 40px 0px 20px 0px;
@@ -26,7 +80,39 @@
     #inputLastname, #inputFirstname, #inputEmail, #inputPassword {
         background-color: #e5e5e5;
         border: 1px solid #e5e5e5;
+        font-family: 'Circularbook';
     }
+
+    /* footer styles */
+    #footer {
+  padding: 40px 0 30px 0;
+  background: linear-gradient(180deg, #2f6deb 0%, #0657cd 100%);
+  color: #ffffff;
+}
+h6 {
+  font-family: 'Circularmedium';
+}
+.footer-fa-icon {
+  margin-left: 20px;
+}
+.footer-header-color {
+  color: #ffffff;
+  font-weight: 650;
+  font-size: 1.2rem;
+}
+.footer-hr {
+  background-color: #acacac;
+}
+.footer-text {
+  font-size: 1rem !important;
+  color: white;
+  font-family: 'Circularbook';
+}
+/* @media only screen and (max-width: 800px) {
+  #footer {
+    padding-right: 30px;
+  }
+} */
     @media only screen and (max-width: 800px) {
         #SignUp {
         padding: 30px 0px 20px 0px;
@@ -38,6 +124,9 @@
         padding: 30px 0px 20px 0px;
         margin: 10% 10%;
     }
+        .footer-jiggle {
+        text-align: center !important;
+    }
     }
     @media only screen and (max-width: 400px) {
         #SignUp {
@@ -48,8 +137,39 @@
     </style>
 </head>
 <body>
+    <!-- header section -->
+    <section id="nav">
+            <div class="container pb-4">
+                <nav class="navbar navbar-expand-lg navbar-light pl-0 pr-0">
+                    <a class="navbar-brand" href="#"><img src="./jiggle logo blue.svg" width="70%"> </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Products</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Vendors</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                        </li>
+                    </ul>
+                    <button class="get-started-button navigation-link">GET STARTED</button>
+                    </div>
+                </nav>
+            </div>
+        </section>
+    <!-- form section -->
+    <section id="form-section">
     <div id="SignUp">
-        <form>
+        <form class="pb-4">
            <div class="form-group row">
                <div class="col-sm-12">
                <input type="text" class="form-control" id="inputFirstname" placeholder="Firstname">
@@ -91,6 +211,75 @@
            </div>
        </form> 
      </div>
+    </section>
+
+<!-- footer section -->
+<section id="footer">
+    <div class="container text-dark">
+        <div class="row">
+        <div class="col-md-3 col-sm-12 footer-jiggle">
+            <img src="./jiggle logo.svg" height="25px">
+            <p class="pb-3"></p>
+            <img src="./googleplay dark.svg" class="mb-3" alt="" height="40px;">
+        </div>
+        <div class="col-md-2 footer-jiggle">
+            <h6 class="mb-3 footer-header-color get-started" style="font-weight:550">
+            Company
+            </h6>
+            <p class="mb-3 footer-text">
+            About Us
+            </p>
+            <p class="mb-3 footer-text">
+            Blog
+            </p>
+            <p class="mb-3 footer-text">
+            FAQ's
+            </p>
+        </div>
+        <div class="col-md-2 footer-jiggle">
+            <h6 class="mb-3 footer-header-color get-started" style="font-weight:550">
+            Products
+            </h6>
+            <p class="mb-3 footer-text">
+            Features
+            </p>
+            <p class="mb-3 footer-text">
+            Client App
+            </p>
+            <p class="mb-3 footer-text">
+            Vendor App
+            </p>
+        </div>
+        <div class="col-md-3 footer-jiggle">
+            <h6 class="mb-3 footer-header-color get-started" style="font-weight:550">
+            Legal
+            </h6>
+            <p class="mb-3 footer-text">
+            Terms and conditions
+            </p>
+            <p class="mb-3 footer-text">
+            Privacy Policy
+            </p>
+        </div>
+        <div class="col-md-2 footer-jiggle">
+            <h6 class="mb-3 footer-header-color get-started" style="font-weight:550">
+            Connect with us
+            </h6>                    
+            <p class="mb-3 footer-text">
+            support@jiggle.ng
+            </p>                    
+            <p class="mb-3 footer-text">
+            +234 000 0000 000
+            </p>   
+            <i class="fa fa-twitter text-white"></i>               
+            <i class="fa fa-instagram footer-fa-icon text-white"></i>              
+            <i class="fa fa-facebook footer-fa-icon text-white"></i>             
+        </div>
+        </div>
+        <hr class="mt-2 footer-hr">
+    </div>
+    </section>
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
